@@ -42,6 +42,7 @@ export class MyChartComponent {
 
   public radialOptions: Partial<RadialOptions>;
 
+  
   constructor() {
     this.radialOptions = {
       chart: {
