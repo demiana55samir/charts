@@ -59,7 +59,7 @@ export class MyDonutsComponent {
       series: [80, 25, 40, 55],
       chart: {
         type: 'donut',
-        width: 350,
+        width: 300,
       },
       labels: [
         'Financial Audits',
@@ -67,11 +67,6 @@ export class MyDonutsComponent {
         'Operational Audits',
         'Others Audits',
       ],
-      // style: {
-      //   colors: ['#89CFF0', '#A9A9A9', '#1C1C2C', '#F5F5F5'],
-      //   fontSize: '16px',
-      //   fontWeight: 'bold',
-      // },
       fill: {
         colors: ['#1C1C2C', '#A9A9A9',  '#F5F0F0','#89CFF0'],
         opacity: 0.9,

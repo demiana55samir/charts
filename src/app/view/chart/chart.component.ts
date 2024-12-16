@@ -19,7 +19,7 @@ export type ChartOptions = {
   plotOptions:ApexPlotOptions;
   labels?: string[];
   fill:ApexFill;
-  stroke:ApexStroke;
+  stroke:ApexStroke | undefined;
 };
 
 @Component({
@@ -44,7 +44,7 @@ export class ChartComponent {
     this.chartOptions = {
       chart: {
         type: 'line',
-        width:650
+        width:300
       },
       series: [
         {

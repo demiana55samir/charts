@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { ChartComponent } from './view/chart/chart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -13,7 +13,6 @@ import { MyDonutsComponent } from "./view/my-donuts/my-donuts.component";
     FormsModule,
     ReactiveFormsModule,
     NgApexchartsModule,
-    // MyChartComponent,
     MyDonutsComponent,
     MyChartComponent
 ],
@@ -22,4 +21,14 @@ import { MyDonutsComponent } from "./view/my-donuts/my-donuts.component";
 })
 export class AppComponent {
   title = 'charts';
+
+  isRTL = false; 
+
+  constructor(private renderer: Renderer2) {}
+
+  toggleDirection(): void {
+    this.isRTL = !this.isRTL;
+    let dir = this.isRTL ? 'rtl' : 'ltr';
+    this.renderer.setAttribute(document.documentElement, 'dir', dir); 
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgApexchartsModule, ApexChart, ApexYAxis, ApexFill } from 'ng-apexcharts';
+import { NgApexchartsModule, ApexChart } from 'ng-apexcharts';
 
 export type RadialOptions = {
   series: number[];
@@ -47,19 +47,21 @@ export class MyChartComponent {
     this.radialOptions = {
       chart: {
         type: 'radialBar',
-        height: 350
+        height: 300
       },
       series: [64, 73, 48], 
       labels: ['New', 'Recovered', 'In Progress '], 
-      colors: ['#1C1C2C', '#FEB019','#89CFF0'], 
+      colors: ['#1F1F21', '#FEB011','#89CFFF'], 
+    
       plotOptions: {
         radialBar: {
+
           dataLabels: {
             name: {
-              fontSize: '16px', 
+              fontSize: '5px', 
             },
             value: {
-              fontSize: '14px', 
+              fontSize: '10px', 
             },
             total: {
               show: true,
