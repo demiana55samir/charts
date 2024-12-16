@@ -44,20 +44,22 @@ export class ChartComponent {
     this.chartOptions = {
       chart: {
         type: 'line',
-        width:550
+        width:650
       },
       series: [
         {
           name: 'sales',
-          data: [30, 40, 35, 50, 49, 20, 70, 91, 100]
+          data: [30, 40, 35, 50, 49, 20, 70, 91, 100,101],
+          color:"purple"
         },
         {
           name: 'revenue', 
-          data: [150, 110, 25, 90, 75, 55, 65, 85, 160] 
+          data: [150, 110, 25, 90, 75, 55, 65, 85, 160,165],
+          color:"green"
         }
     ],
       xaxis: {
-        categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+        categories: ['week 01','week 02','week 03','week 04','week 05','week 06','week 07', 'week 08','week 09','week 10']
       },
       stroke: {
         curve: 'smooth',
